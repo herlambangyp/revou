@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
 </header>
 <div class="px-10 py-5 md:px-24 md:py-10">
     <h1 id="sambutan" class="text-2xl md:text-4xl font-bold">
-        <span id="namaPengunjung"></span> Welcome to My Website
+        <span id="namaPengunjung" class="capitalize"></span> Welcome to My Website
     </h1>
     <p class="text-base md:text-2xl">This is a simple website created for learning purposes.</p>
     <img 
@@ -96,39 +96,39 @@
 
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Nama</span>
+            <span class="label-text">Name</span>
           </label>
-          <input type="text" id="nama" placeholder="Nama" class="input input-bordered w-full"/>
+          <input type="text" id="nama" placeholder="Your name" class="input input-bordered w-full"/>
         </div>
 
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Tanggal Lahir</span>
+            <span class="label-text">Day Birth</span>
           </label>
           <input type="date" id="tgl" class="input input-bordered w-full"/>
         </div>
 
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Jenis Kelamin</span>
+            <span class="label-text">Gender</span>
           </label>
           <div class="flex gap-4">
             <label class="flex items-center gap-2 cursor-pointer">
-              <input type="radio" name="jk" value="Laki-Laki" class="radio radio-primary" checked/>
-              <span>Laki-Laki</span>
+              <input type="radio" name="jk" value="Male" class="radio radio-primary" checked/>
+              <span>Male</span>
             </label>
             <label class="flex items-center gap-2 cursor-pointer">
-              <input type="radio" name="jk" value="Perempuan" class="radio radio-primary"/>
-              <span>Perempuan</span>
+              <input type="radio" name="jk" value="Female" class="radio radio-primary"/>
+              <span>Female</span>
             </label>
           </div>
         </div>
 
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Pesan</span>
+            <span class="label-text">Message</span>
           </label>
-          <textarea id="pesan" class="textarea textarea-bordered h-28" placeholder="Pesan"></textarea>
+          <textarea id="pesan" class="textarea textarea-bordered h-28" placeholder="Your message"></textarea>
         </div>
 
         <button type="button" onclick="inputDataMassageUs()" class="btn btn-neutral w-full">
@@ -142,10 +142,10 @@
           <span id="time"></span>
         </p>
 
-        <p><strong>Nama :</strong> <span id="prevNama">-</span></p>
-        <p><strong>Tanggal Lahir :</strong> <span id="prevTgl">-</span></p>
-        <p><strong>Jenis Kelamin :</strong> <span id="prevJK">-</span></p>
-        <p><strong>Pesan :</strong> <span id="prevPesan">-</span></p>
+        <p><strong>Name :</strong> <span id="prevNama" class="capitalize">-</span></p>
+        <p><strong>Day Birth :</strong> <span id="prevTgl">-</span></p>
+        <p><strong>Gender :</strong> <span id="prevJK">-</span></p>
+        <p><strong>Message :</strong> <span id="prevPesan">-</span></p>
       </div>
 
     </div>
