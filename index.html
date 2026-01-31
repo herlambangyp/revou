@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Websitku
+    </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<header class="navbar bg-base-100 border-y-2 px-4">
+  <div class="navbar-start">
+    <span class="w-8 h-8 text-warning">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="28"
+            stroke="currentColor" stroke-width="3"/>
+            <circle cx="32" cy="32" r="10"
+            stroke="currentColor" stroke-width="3"/>
+            <path d="M22 32h20M32 22v20"
+            stroke="currentColor" stroke-width="3"
+            stroke-linecap="round"/>
+        </svg>
+    </span>
+  </div>
+
+  <div class="navbar-end md:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost">
+        ☰
+      </label>
+      <ul tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Home</a></li>
+        <li><a>Profile</a></li>
+        <li><a>Portofolio</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-end hidden md:flex">
+    <a class="btn btn-outline">Home</a>
+    <a class="btn btn-outline">Profile</a>
+    <a class="btn btn-outline">Portofolio</a>
+    <a class="btn btn-outline">Contact</a>
+  </div>
+
+</header>
+<div class="px-10 py-5 md:px-24 md:py-10">
+    <h1 id="sambutan" class="text-2xl md:text-4xl font-bold">
+        <span id="namaPengunjung"></span> Welcome to My Website
+    </h1>
+    <p class="text-base md:text-2xl">This is a simple website created for learning purposes.</p>
+    <img 
+    src="https://th.bing.com/th/id/R.3bcaa3cafbe331853e76414c944ac451?rik=e8MS%2fNZ%2fqahEng&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fFree-1366x768-Backgrounds.jpg&ehk=L6A06aH7rFOYck5eN4k%2bO7FEI3Chs%2bemHJoTcJiubqE%3d&risl=&pid=ImgRaw&r=0"
+    alt="Gambar latar"  
+    class="mt-5 rounded-lg"
+    />
+</div>
+<hr/>
+<div class="px-10 py-5 md:px-24 md:py-10">
+    <h1 class="text-2xl font-bold">Our Headquarters</h1>
+    <div class="flex justify-start flex-wrap gap-6 px-0 md:px-24 py-10">
+        <span class="flex flex-col items-center gap-3">
+            <span class="rounded-full w-32 h-32 border-4"></span>
+            <p>Bandung</p>
+        </span>
+        <span class="flex flex-col items-center gap-3">
+            <span class="rounded-full w-32 h-32 border-4"></span>
+            <p>Jakarta</p>
+        </span>
+        <span class="flex flex-col items-center gap-3">
+            <span class="rounded-full w-32 h-32 border-4"></span>
+            <p>Surabaya</p>
+        </span>
+        <span class="flex flex-col items-center gap-3">
+            <span class="rounded-full w-32 h-32 border-4"></span>
+            <p>Medan</p>
+        </span>
+    </div>
+</div>
+<hr/>
+<div class="px-10 py-5 md:px-24 md:py-10">
+    <h1 class="text-2xl font-bold mb-6">Message Us</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form id="contactForm" class="space-y-4">
+
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Nama</span>
+          </label>
+          <input type="text" id="nama" placeholder="Nama" class="input input-bordered w-full"/>
+        </div>
+
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Tanggal Lahir</span>
+          </label>
+          <input type="date" id="tgl" class="input input-bordered w-full"/>
+        </div>
+
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Jenis Kelamin</span>
+          </label>
+          <div class="flex gap-4">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="jk" value="Laki-Laki" class="radio radio-primary" checked/>
+              <span>Laki-Laki</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="jk" value="Perempuan" class="radio radio-primary"/>
+              <span>Perempuan</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Pesan</span>
+          </label>
+          <textarea id="pesan" class="textarea textarea-bordered h-28" placeholder="Pesan"></textarea>
+        </div>
+
+        <button type="button" onclick="inputDataMassageUs()" class="btn btn-neutral w-full">
+          Submit
+        </button>
+      </form>
+
+      <div class="border border-base-300 rounded-lg p-4 text-sm space-y-2">
+        <p class="font-semibold">
+          Current time :
+          <span id="time"></span>
+        </p>
+
+        <p><strong>Nama :</strong> <span id="prevNama">-</span></p>
+        <p><strong>Tanggal Lahir :</strong> <span id="prevTgl">-</span></p>
+        <p><strong>Jenis Kelamin :</strong> <span id="prevJK">-</span></p>
+        <p><strong>Pesan :</strong> <span id="prevPesan">-</span></p>
+      </div>
+
+    </div>
+
+
+
+</div>
+<hr/>
+<div class="px-10 py-5 md:px-24 md:py-10">
+    <div class="flex justify-end w-full">
+        <p class="text-sm">© 2026 Websitku. All rights reserved.</p>
+    </div>
+</div>
+
+<dialog id="modalNama" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hey there</h3>
+    <p id="mintaInfo" class="py-2">Please let us know your name, or an alias is totally fine</p>
+
+    <input
+      id="inputNamaUser"
+      type="text"
+      placeholder="Your name..."
+      class="input input-bordered w-full mt-2"
+    />
+
+
+    <div class="modal-action">
+      <button class="btn btn-neutral w-full" onclick="simpanNamaUser()">
+        Thats it!
+      </button>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/main.js"></script>
+</body>
+</html>
